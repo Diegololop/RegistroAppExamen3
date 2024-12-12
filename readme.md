@@ -3,4 +3,6 @@ Felipe Tapia
 José Valdebenito
 Diego Sandovalt
 
-Github:
+Sección: 007D
+
+Github: https://github.com/Diegololop/RegistroAppExamen3
