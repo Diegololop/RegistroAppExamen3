@@ -1,0 +1,41 @@
+<ion-content class="ion-padding">
+  <ion-toast
+    [isOpen]="showToast"
+    [message]="toastMessage"
+    duration="2000"
+    (didDismiss)="showToast = false">
+  </ion-toast>
+
+  <ion-img src="assets/img/Logo.png" alt="logoDuoc"></ion-img>
+  <ion-img src="assets/img/correo.jpg" class="background" alt="imagen"></ion-img>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="contenedor-card">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title class="text-center">{{ 'CorreoPage.Components.Title' | translate }}</ion-card-title>
+        <ion-card-subtitle class="text-center">{{ 'CorreoPage.Components.SubTitle' | translate }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item id="correo">
+          <ion-input 
+            type="email" 
+            [(ngModel)]="email" 
+            placeholder="{{ 'CorreoPage.Components.EmailPlaceholder' | translate }}" 
+            class="input-personalizado" 
+            required>
+          </ion-input>
+        </ion-item>
+        <ion-button id="validarCorreo" expand="full" (click)="validarCorreo()" class="boton-validar">{{ 'CorreoPage.Components.VerifyButton' | translate }}</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="centered-button">
+    <ion-button  expand="full" (click)="GoToLogin()" color="secondary" class="custom-login-button">
+      {{ 'CorreoPage.Components.GoToLogin' | translate }}
+    </ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,19 @@
+ion-segment {
+  --background: #F1B634; /* Color de fondo del segmento */
+  --indicator-color: #F1B634; /* Color del indicador (barra de selección) */
+  --color-checked: #ffffff; /* Color del texto cuando está seleccionado */
+}
+
+ion-segment-button {
+  --color: #333333; /* Color del texto */
+  --background: #F1B634; /* Color de fondo de los botones */
+}
+
+ion-segment-button[aria-pressed="true"] {
+  --background: #3880ff; /* Color de fondo del botón activo */
+  --color: #F1B634; /* Color del texto del botón activo */
+}
+
+ion-toolbar{
+  --background: #F1B634;
+}

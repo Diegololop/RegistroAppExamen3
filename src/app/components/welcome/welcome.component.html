@@ -1,0 +1,10 @@
+<div class="ion-text-center">
+  <h1>{{ 'WelcomePage.Title' | translate }}</h1>
+  <h1>{{ user.firstName }} {{ user.lastName }}</h1>
+  <p class="attendance-message">{{ 'WelcomePage.Message' | translate }}</p>
+  <div>
+    <canvas #canvas style="display: none;"></canvas>
+  </div>
+  <ion-button (click)="comenzarEscaneoQR()">{{ 'WelcomePage.StartButton' | translate }}</ion-button>
+  <ion-button expand="default" color="danger" (click)="cerrarSesion()">{{ 'WelcomePage.LogoutButton' | translate }}</ion-button>
+</div>

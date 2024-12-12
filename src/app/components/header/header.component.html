@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar color="primary" >
+    <div class="titulo-container" style="display: flex; align-items: center; flex: 1;">
+      <img src="assets/img/Logo_DuocUC.svg (4).png" alt="logo" class="logo">
+      <span #titulo class="titulo-text">{{ 'AppName' | translate }}</span>
+    </div>
+    <ion-buttons id="salir" slot="end">
+      <ion-button (click)="logout()" size="small" fill="clear">
+        <ion-icon name="log-out-outline" color="light"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>

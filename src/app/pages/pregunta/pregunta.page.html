@@ -1,0 +1,38 @@
+<ion-content class="ion-padding">
+  <ion-toast
+    [isOpen]="showToast"
+    [message]="toastMessage"
+    duration="2000"
+    (didDismiss)="showToast = false">
+  </ion-toast>
+  
+  <ion-img src="assets/img/Logo.png" alt="logoDuoc"></ion-img>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+  <ion-img src="assets/img/preguntaSecreta.jpg" class="background" alt="imagen"></ion-img>
+  <div class="contenedor-card"> 
+    <ion-card *ngIf="user">
+      <ion-card-header>
+        <ion-card-title class="text-center">{{ 'PreguntaPage.Components.Title' | translate }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p class="text-center">{{ translatedSecretQuestion }}</p>
+        <ion-item id="respuesta1">
+          <ion-input type="text" [(ngModel)]="answer" placeholder="{{ 'PreguntaPage.Components.AnswerPlaceholder' | translate }}" class="Respuesta"></ion-input>
+        </ion-item>
+        <ion-button id="respuesta" expand="full" (click)="verificarRespuesta()">
+          {{ 'PreguntaPage.Components.VerifyButton' | translate }}
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="centered-button">
+    <ion-button expand="full" (click)="GoToLogin()" color="secondary">
+      {{ 'PreguntaPage.Components.GoToLogin' | translate }}
+    </ion-button>
+  </div>
+</ion-content>

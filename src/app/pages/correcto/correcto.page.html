@@ -1,0 +1,26 @@
+<ion-content fullscreen="true">
+  <div class="landing-container">
+    <img src="assets/img/correcto.jpg" class="background" alt="imagen">
+    
+    <!-- Logo en la parte superior -->
+    <img src="assets/img/Logo.png" alt="logoDuoc" class="logo-top">
+    <br>
+    <br>
+    <br>
+
+
+    <ion-card class="card-centered">
+      <ion-card-header>
+        <ion-card-title class="text-center">{{ 'CorrectoPage.Components.Title' | translate }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p class="text-center">{{ 'CorrectoPage.Components.Password' | translate }} {{password}}</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-button id="login" name="log-in-outline" expand="block" class="custom-login-button" (click)="GoToLogin()">
+      <ion-icon slot="start" name="log-in-outline"></ion-icon>
+      {{ 'CorrectoPage.Components.Login' | translate }}
+    </ion-button>
+  </div>
+</ion-content>

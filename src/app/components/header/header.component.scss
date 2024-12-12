@@ -1,0 +1,72 @@
+ion-tabs {
+  ion-tab-bar {
+      position: absolute;
+      bottom: 0;
+      width: 100%;        
+      --background: transparent;
+      border-radius: 20px 20px 0 0;
+      --border: 0;
+      ion-tab-button {
+          --background: #132CAA;
+          --color: white  ;
+
+          ion-icon {
+              font-size: 1.5rem;
+          }
+      }
+  }
+  svg {
+      width: 85px;
+      margin-top: 16px;
+      path {
+          fill: #132CAA;
+      }
+  }
+
+  ion-tab-button.misdatos{
+      margin-right: -2px;
+      margin-left: -2px;
+      border-top-right-radius: 25px;
+  }
+  ion-tab-button.miclase {
+      margin-left: -2px;
+      margin-right: -2px;
+      border-top-left-radius: 25px;
+  }
+  ion-fab {
+      ion-fab-button {
+          --background: linear-gradient(to bottom, #C13584, #E1306C, #FD1D1D, #F56040, #F77737, #FCAF45, #FFDC80);
+          ion-icon {
+              font-size: 2rem;
+          }
+      }
+  }
+
+  .titulo-container {
+      display: flex;
+      align-items: center;
+    }
+    
+    .logo {
+      width: 40px; /* Ajusta el tamaño del logo según lo necesites */
+      height: auto;
+      margin-right: 8px; /* Espacio entre el logo y el texto */
+    }
+    
+    .duoc-text {
+      font-size: 24px; /* Tamaño del texto 'DuocUC' */
+      color: #FFA500; /* Color para 'DuocUC' (puedes cambiarlo al que necesites) */
+      font-weight: bold; /* Negrita para 'DuocUC' */
+      margin-right: 4px; /* Espacio entre 'DuocUC' y el siguiente texto */
+    }
+    
+    .titulo-text {
+      font-size: 18px; /* Tamaño del texto del título */
+      color: white; /* Color del texto del título */
+    }
+    
+ion-toolbar {
+    --background: #FCAF45; /* Cambia #yourColorCode por el color deseado */
+    }
+      
+}

@@ -1,0 +1,21 @@
+<ion-content [fullscreen]="true" class="ion-padding ion-text-center content-center">
+  <div class="logo-box">
+    <div class="logo">
+      <ion-img src="assets/img/Logo.png" alt="logoDuoc"></ion-img>
+    </div>
+  </div>
+  <img src="assets/img/incorrecto.jpg" class="background" alt="imagen">
+  <div class="card-container">
+    <ion-card>
+      <ion-card-subtitle class="ion-text-center ion-text-uppercase ion-margin-bottom ion-margin-top" style="font-size: 20px; font-weight: bold;">
+        ¡Lo sentimos!
+      </ion-card-subtitle>
+      <ion-card-subtitle>Los datos ingresados</ion-card-subtitle> 
+      <ion-card-subtitle>no son correctos</ion-card-subtitle>
+          
+      <ion-button name="log-in-outline"expand="block" class="custom-login-button" (click)="goToLogin()">
+        <ion-icon slot="start" name="log-in-outline"></ion-icon>
+        Iniciar Sesión</ion-button>
+    </ion-card>
+  </div>
+</ion-content>

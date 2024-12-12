@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-toolbar  class="transparent-bg">
+    <div slot="start" class="ion-margin language-container">
+      <app-language id="idioma" #selectLanguage></app-language>
+    </div>
+    <div class="show-in-landscape">
+    </div>
+    <div slot="end" class="ion-margin">
+      <ion-button id="color" shape="round" size="small" (click)="navigateTheme()">
+        {{ 'Login.Tema' | translate }}
+        <ion-icon slot="start" name="color-wand-outline"></ion-icon>
+      </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <div class="logo-title-container">
+    <img src="../../assets/img/Logo_DuocUC.svg.png" />
+    <ion-title>{{ 'Login.Title.Main' | translate }} </ion-title>
+  </div>
+
+  <ion-img src="assets/img/login.jpg" alt="background" class="background"></ion-img>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title class="text-center">{{ 'Login.Title.Login' | translate }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item id="nombre">
+        <ion-input id="nombre"
+          label="{{ 'Login.Label.userName' | translate }}" 
+          labelPlacement="floating" 
+          [(ngModel)]="userName" 
+          class="transparent-input">
+        </ion-input>
+      </ion-item>
+      
+      <ion-item id="contraseña">
+        <ion-input 
+          label="{{ 'Login.Label.Password' | translate }}" 
+          labelPlacement="floating" 
+          [(ngModel)]="password" 
+          type="{{ 'Login.Placeholder.Password' | translate }}" 
+          class="transparent-input">
+        </ion-input>
+      </ion-item>
+      
+
+      <div class="ion-text-center margin-top-6" >
+        <ion-button id="ingresar" expand="block" color="warning" (click)="ingresar()">
+          <ion-icon slot="start" name="person"></ion-icon> {{'Login.Button.Login' | translate}}
+        </ion-button>
+        
+        <!-- Nuevo botón de registro -->
+        <ion-button id="registrar" expand="block" color="secondary" (click)="registrarme()" class="margin-top-10">
+          <ion-icon slot="start" name="person-add"></ion-icon> Registrarse
+        </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-card-content>
+    <a id="recuperar" (click)="recuperarContrasena()"> {{ 'Login.Button.ForgotPassword' | translate }}</a>
+  </ion-card-content>
+  <ion-card-content>
+    <a (click)="goToRoute()">{{ 'Login.Button.rute' | translate }}</a>
+  </ion-card-content>
+</ion-content>

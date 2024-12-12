@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar color="primary" class="padding-6">
+    <h4 slot="start" class="margin-top-6">
+      <ion-select id="temas"
+        label="{{ 'ThemePage.Label.ColorTheme' | translate }}"
+        (ionChange)="changeTheme($event)"
+        [(ngModel)]="colorTheme"
+      >
+        <ion-select-option value="light">
+          {{ 'ThemePage.Color.Light' | translate }}
+        </ion-select-option>
+        <ion-select-option value="dark">
+          {{ 'ThemePage.Color.Dark' | translate }}
+        </ion-select-option>
+        <ion-select-option value="green">
+          {{ 'ThemePage.Color.Green' | translate }}
+        </ion-select-option>
+        <ion-select-option value="red">
+          {{ 'ThemePage.Color.Red' | translate }}
+        </ion-select-option>
+        <ion-select-option value="facebook">
+          {{ 'ThemePage.Color.Facebook' | translate }}
+        </ion-select-option>
+        <ion-select-option id="instagram" value="instagram">
+          {{ 'ThemePage.Color.Instagram' | translate }}
+        </ion-select-option>
+        <ion-select-option value="duoc">
+          {{ 'ThemePage.Color.Duoc' | translate }}
+        </ion-select-option>
+      </ion-select>
+    </h4>
+    <div slot="end">
+      <ion-button id="volverLogin" shape="round" (click)="goBack()">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <!-- Botones -->
+  <p>
+    <ion-button shape="round" size="small" color="primary">
+      {{ 'ThemePage.Button.Primary' | translate }}
+    </ion-button>
+    <ion-button shape="round" size="small" color="secondary">
+      {{ 'ThemePage.Button.Secondary' | translate }}
+    </ion-button>
+    <ion-button shape="round" size="small" color="tertiary">
+      {{ 'ThemePage.Button.Tertiary' | translate }}
+    </ion-button>
+    <ion-button shape="round" size="small" color="success">
+      {{ 'ThemePage.Button.Success' | translate }}
+    </ion-button>
+    <ion-button shape="round" size="small" color="warning">
+      {{ 'ThemePage.Button.Warning' | translate }}
+    </ion-button>
+    <ion-button shape="round" size="small" color="danger">
+      {{ 'ThemePage.Button.Danger' | translate }}
+    </ion-button>
+    <ion-button shape="round" size="small" color="light">
+      {{ 'ThemePage.Button.Light' | translate }}
+    </ion-button>
+    <ion-button shape="round" size="small" color="dark">
+      {{ 'ThemePage.Button.Dark' | translate }}
+    </ion-button>
+    <ion-button shape="round" size="small" color="primary">
+      <ion-icon slot="start" name="home-outline" size="small"></ion-icon>
+      {{ 'ThemePage.Button.Home' | translate }}
+    </ion-button>
+    <ion-button shape="round" size="small" color="primary">
+      <ion-icon slot="start" name="log-out-outline" size="small"></ion-icon>
+      {{ 'ThemePage.Button.Logout' | translate }}
+    </ion-button>
+  </p>
+</ion-content>

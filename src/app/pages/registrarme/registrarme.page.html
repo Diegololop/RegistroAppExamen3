@@ -1,0 +1,155 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/login" color="primary"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registro de Usuario</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="registro-container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title class="ion-text-center">Ingresa tus datos</ion-card-title>
+      </ion-card-header>
+      
+      <ion-card-content>
+        <div class="form-section">
+          <h4>Información Personal</h4>
+          <ion-item class="custom-item">
+            <ion-input 
+              type="text" 
+              [(ngModel)]="user.userName" 
+              label="Nombre de usuario" 
+              labelPlacement="floating"
+              class="custom-input"
+              required>
+            </ion-input>
+          </ion-item>
+
+          <div class="name-group">
+            <ion-item class="custom-item">
+              <ion-input 
+                type="text" 
+                [(ngModel)]="user.firstName" 
+                label="Nombre" 
+                labelPlacement="floating"
+                required>
+              </ion-input>
+            </ion-item>
+
+            <ion-item class="custom-item">
+              <ion-input 
+                type="text" 
+                [(ngModel)]="user.lastName" 
+                label="Apellido" 
+                labelPlacement="floating"
+                required>
+              </ion-input>
+            </ion-item>
+          </div>
+
+          <ion-item class="custom-item">
+            <ion-input 
+              type="text" 
+              [(ngModel)]="user.dateOfBirth" 
+              label="Fecha de nacimiento (DD/MM/AAAA)" 
+              labelPlacement="floating"
+              placeholder="DD/MM/AAAA"
+              required>
+            </ion-input>
+          </ion-item>
+        </div>
+
+        <div class="form-section">
+          <h4>Contacto</h4>
+          <ion-item class="custom-item">
+            <ion-input 
+              type="email" 
+              [(ngModel)]="user.email" 
+              label="Email" 
+              labelPlacement="floating"
+              required>
+            </ion-input>
+          </ion-item>
+
+          <ion-item class="custom-item">
+            <ion-input 
+              type="text" 
+              [(ngModel)]="user.address" 
+              label="Dirección" 
+              labelPlacement="floating"
+              required>
+            </ion-input>
+          </ion-item>
+        </div>
+
+        <div class="form-section">
+          <h4>Seguridad</h4>
+          <ion-item class="custom-item">
+            <ion-input 
+              type="password" 
+              [(ngModel)]="user.password" 
+              label="Contraseña" 
+              labelPlacement="floating"
+              required>
+            </ion-input>
+          </ion-item>
+
+          <ion-item class="custom-item">
+            <ion-input 
+              type="password" 
+              [(ngModel)]="repeticionPassword" 
+              label="Repetir contraseña"
+              labelPlacement="floating"
+              required>
+            </ion-input>
+          </ion-item>
+
+          <ion-item class="custom-item">
+            <ion-input 
+              type="text" 
+              [(ngModel)]="user.secretQuestion" 
+              label="Pregunta secreta" 
+              labelPlacement="floating"
+              required>
+            </ion-input>
+          </ion-item>
+
+          <ion-item class="custom-item">
+            <ion-input 
+              type="text" 
+              [(ngModel)]="user.secretAnswer" 
+              label="Respuesta secreta" 
+              labelPlacement="floating"
+              required>
+            </ion-input>
+          </ion-item>
+        </div>
+
+        <div class="form-section">
+          <h4>Información Académica</h4>
+          <ion-item class="custom-item">
+            <ion-select 
+              [(ngModel)]="user.educationalLevel" 
+              label="Nivel educacional" 
+              labelPlacement="floating"
+              required>
+              <ion-select-option [value]="nivel" *ngFor="let nivel of niveles">
+                {{nivel.name}}
+              </ion-select-option>
+            </ion-select>
+          </ion-item>
+        </div>
+
+        <div class="button-container">
+          <ion-button expand="block" (click)="registrarUsuario()" color="warning" class="register-button">
+            <ion-icon name="person-add-outline" slot="start"></ion-icon>
+            Registrarse
+          </ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>

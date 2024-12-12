@@ -1,0 +1,47 @@
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label>{{ 'MyClassPage.BlockStart' | translate }}:</ion-label>
+      <ion-text>{{ miclase.bloqueInicio }}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{ 'MyClassPage.BlockEnd' | translate }}:</ion-label>
+      <ion-text>{{ miclase.bloqueTermino }}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{ 'MyClassPage.Day' | translate }}:</ion-label>
+      <ion-text>{{ miclase.dia }}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{ 'MyClassPage.StartTime' | translate }}:</ion-label>
+      <ion-text>{{ miclase.horaInicio }}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{ 'MyClassPage.EndTime' | translate }}:</ion-label>
+      <ion-text>{{ miclase.horaFin }}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{ 'MyClassPage.SubjectId' | translate }}:</ion-label>
+      <ion-text>{{ miclase.idAsignatura }}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{ 'MyClassPage.SubjectName' | translate }}:</ion-label>
+      <ion-text>{{ miclase.nombreAsignatura }}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{ 'MyClassPage.TeacherName' | translate }}:</ion-label>
+      <ion-text>{{ miclase.nombreProfesor }}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{ 'MyClassPage.Section' | translate }}:</ion-label>
+      <ion-text>{{ miclase.seccion }}</ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{ 'MyClassPage.Campus' | translate }}:</ion-label>
+      <ion-text>{{ miclase.sede }}</ion-text>
+    </ion-item>
+  </ion-list>
+  <div class="centrar-boton">
+    <ion-button expand="default" color="danger" (click)="cerrarSesion()">{{ 'MyClassPage.LogoutButton' | translate }}</ion-button>
+  </div>
+</ion-content>

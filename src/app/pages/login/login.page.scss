@@ -1,0 +1,119 @@
+.background {
+    position: absolute; /* Hace que la imagen se posicione en relación al contenedor */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ocupar todo el ancho */
+    height: 100%; /* Ocupar todo el alto */
+    object-fit: cover; /* Mantiene la relación de aspecto de la imagen */
+    z-index: -1; /* Asegura que esté detrás de otros elementos */
+  }
+  
+  ion-content {
+    position: relative; /* Asegura que el ion-img se coloque relativo a ion-content */
+  }
+  
+  /* Contenedor principal para centrar todo el contenido */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa el 100% de la altura de la ventana */
+  }
+  
+  /* Contenedor combinado para el logo y el título */
+  .logo-title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo con opacidad */
+    padding: 20px;
+    border-radius: 12px; /* Bordes redondeados */
+    margin-bottom: 20px;
+  }
+  
+  .logo-title-container img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px; /* Espacio entre el logo y el título */
+  }
+  
+  .logo-title-container ion-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff; /* Color blanco para el texto */
+    text-align: center;
+  }
+  
+  ion-card {
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    background-color: #212121;
+    opacity: 0.9;
+  }
+  
+  ion-card-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+  }
+  
+  ion-input {
+    --padding-start: 12px;
+    color: #fff;
+  }
+  
+  ion-button {
+    --background: #F1B634;
+    --border-radius: 8px;
+    margin-top: 12px;
+  }
+  
+  ion-button ion-icon {
+    margin-right: 8px;
+  }
+  
+  a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  ion-content {
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+  
+  .language-container {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    background-color: #F1B634;
+    border-radius: 8px; 
+    padding: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  }
+
+  .transparent-input {
+    --background: transparent; 
+    --placeholder-color: rgba(0, 0, 0, 0);
+    --color: rgb(0, 0, 0);
+    border: none; 
+  }
+  
+  ion-item {
+    --background: transparent;
+    --border-color: transparent;
+  }
+
+  

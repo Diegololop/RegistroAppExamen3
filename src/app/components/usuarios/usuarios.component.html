@@ -1,0 +1,35 @@
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>
+        <ion-icon name="people"></ion-icon>
+        Lista de Usuarios
+      </ion-label>
+    </ion-list-header>
+
+    <ion-item *ngFor="let usuario of usuarios" [class.admin-user]="usuario.userName === 'admin'">
+      <ion-label>
+        <h2>
+          {{ usuario.userName }}
+          <span class="role-badge" [class.admin]="usuario.userName === 'admin'" [class.user]="usuario.userName !== 'admin'">
+            {{ usuario.userName === 'admin' ? 'Administrador' : 'Usuario' }}
+          </span>
+        </h2>
+        <p>{{ usuario.firstName }} {{ usuario.lastName }}</p>
+        <p>{{ usuario.email }}</p>
+      </ion-label>
+      <ion-button 
+        slot="end" 
+        color="danger"
+        (click)="eliminarUsuario(usuario.userName)"
+        [disabled]="currentUser?.userName === 'admin' && usuario.userName === 'admin'">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-button>
+    </ion-item>
+
+    <div *ngIf="usuarios.length === 0" class="no-users">
+      <ion-icon name="people-outline" size="large"></ion-icon>
+      <p>No hay usuarios registrados</p>
+    </div>
+  </ion-list>
+</ion-content>

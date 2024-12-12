@@ -1,0 +1,51 @@
+<ion-footer>
+  <ion-toolbar style="padding-bottom: 4px">
+    <ion-segment 
+      value="home" 
+      (ionChange)="sendClickEvent($event)"
+      [(ngModel)]="selectedButton">
+
+      <!-- Botones para usuario admin -->
+      <ng-container *ngIf="isAdmin">
+        <ion-segment-button id="foro" value="forum">
+          <ion-icon name="pencil-outline"></ion-icon>
+          {{ "HomePage.Button.Forum" | translate }}
+        </ion-segment-button>
+
+        <ion-segment-button id="misDatos" value="mis-datos">
+          <ion-icon name="document-lock-outline"></ion-icon>
+          {{ "HomePage.Button.Datos"| translate }}
+        </ion-segment-button>
+
+        <ion-segment-button id="usuarios" value="usuarios">
+          <ion-icon name="people-outline"></ion-icon>
+          Usuarios
+        </ion-segment-button>
+      </ng-container>
+
+      <!-- Botones para usuarios normales -->
+      <ng-container *ngIf="!isAdmin">
+        <ion-segment-button id="qrCode" value="codigo-qr">
+          <ion-icon name="home-outline"></ion-icon>
+          {{ "HomePage.Button.CodigoQr" | translate }}
+        </ion-segment-button>
+        
+        <ion-segment-button id="miClase" value="mi-clase">
+          <ion-icon name="easel-outline"></ion-icon>
+          {{ "HomePage.Button.MyClass" | translate }}
+        </ion-segment-button>
+        
+        <ion-segment-button id="foro" value="forum">
+          <ion-icon name="pencil-outline"></ion-icon>
+          {{ "HomePage.Button.Forum" | translate }}
+        </ion-segment-button>
+
+        <ion-segment-button id="misDatos" value="mis-datos">
+          <ion-icon name="document-lock-outline"></ion-icon>
+          {{ "HomePage.Button.Datos"| translate }}
+        </ion-segment-button>
+      </ng-container>
+
+    </ion-segment>
+  </ion-toolbar>
+</ion-footer>

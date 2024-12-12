@@ -1,0 +1,224 @@
+// Variables de color institucionales
+$duoc-blue: #003785;
+$duoc-yellow: #FFB800;
+$light-gray: #f5f5f5;
+
+// Estilos globales
+ion-content {
+  --background: #{$light-gray};
+  --padding-top: 1rem;
+  --padding-bottom: 4rem;
+  
+  &::part(scroll) {
+    padding: 16px;
+  }
+}
+
+// Card de creación de post
+.post-creation-card {
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background: white;
+
+  .title-header {
+    color: $duoc-blue;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 1rem;
+    border-bottom: 2px solid $duoc-yellow;
+  }
+
+  ion-item {
+    --padding-start: 0;
+    --inner-padding-end: 0;
+    --background: transparent;
+    margin: 1rem;
+    
+    &::part(native) {
+      padding: 0;
+    }
+
+    ion-label {
+      color: $duoc-blue;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    ion-input, ion-textarea {
+      --padding-start: 12px;
+      --padding-end: 12px;
+      --padding-top: 12px;
+      --padding-bottom: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-top: 4px;
+      background: #{$light-gray};
+      min-height: 42px;
+
+      &::part(native) {
+        padding: 12px;
+      }
+
+      &.input-has-focus {
+        border-color: $duoc-blue;
+      }
+    }
+
+    ion-textarea {
+      min-height: 120px;
+    }
+  }
+}
+
+// Contenedor de botones
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin: 1rem;
+  padding: 0 1rem 1rem;
+
+  ion-button {
+    --border-radius: 8px;
+    --padding-start: 1.5rem;
+    --padding-end: 1.5rem;
+    
+    &[fill="outline"] {
+      --border-color: #{$duoc-blue};
+      --color: #{$duoc-blue};
+    }
+
+    &:not([fill="outline"]) {
+      --background: #{$duoc-blue};
+      --background-activated: #{darken($duoc-blue, 10%)};
+    }
+  }
+}
+
+// Sección de posts
+.posts-section {
+  .section-title {
+    color: $duoc-blue;
+    font-size: 1.3rem;
+    margin: 1.5rem 0;
+    padding-left: 0.5rem;
+    border-left: 4px solid $duoc-yellow;
+    font-weight: 600;
+  }
+}
+
+// Tarjeta de post individual
+.post-card {
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  
+  .post-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    padding: 1rem 1rem 0;
+
+    .post-id {
+      background: $duoc-yellow;
+      color: $duoc-blue;
+      font-weight: bold;
+      height: 24px;
+      padding: 0 12px;
+    }
+
+    .post-author {
+      color: #666;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+  }
+
+  .post-title {
+    color: $duoc-blue;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0.5rem 1rem;
+    line-height: 1.4;
+  }
+
+  .post-content {
+    color: #444;
+    line-height: 1.6;
+    margin: 1rem 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .post-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    border-top: 1px solid #eee;
+    padding: 0.5rem 1rem 0;
+
+    ion-button {
+      --padding-start: 12px;
+      --padding-end: 12px;
+      
+      &[color="primary"] {
+        --color: #{$duoc-blue};
+      }
+      
+      &[color="danger"] {
+        --color: #dc3545;
+      }
+    }
+  }
+}
+
+// Contenedor del botón de logout
+.logout-container {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  
+  ion-button {
+    --border-radius: 8px;
+    --padding-start: 2rem;
+    --padding-end: 2rem;
+    font-weight: 500;
+    text-transform: none;
+  }
+}
+
+// Botón flotante para volver arriba
+ion-fab {
+  margin-bottom: 1rem;
+  margin-right: 1rem;
+  
+  ion-fab-button {
+    --background: #{$duoc-blue};
+    --background-activated: #{darken($duoc-blue, 10%)};
+    --color: white;
+    --box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+}
+
+// Estilos responsive
+@media (max-width: 576px) {
+  .button-container {
+    flex-direction: column;
+    
+    ion-button {
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  .post-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,57 @@
+.custom-login-button {
+  --background: #F1B634; 
+  --color: rgb(0, 0, 0); 
+  --border-radius: 8px; 
+  --padding-start: 16px; 
+  --padding-end: 16px;   
+  margin-top: 25px;
+}
+.boton-validar {
+  --background: #132caa;
+}
+
+.content-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Mantiene la imagen de fondo detrás del contenido */
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+  margin-bottom: 0;
+  max-height: 80%;
+}
+
+ion-card {
+  width: 90%; /* Ajusta según lo necesario */
+  max-width: 400px; /* Límite de tamaño */
+  color: rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0.6)
+}
+
+ion-card-subtitle{
+  color: #F1B634;
+}
+
+.input-personalizado {
+  --color: #ffffff; /* Cambia el color del texto del input */
+  --placeholder-color: #ffffff; /* Cambia el color del placeholder */
+  --background: rgba(0, 0, 0); /* Cambia el fondo del input */
+}

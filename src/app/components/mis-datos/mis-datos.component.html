@@ -1,0 +1,54 @@
+<div class="marco">
+
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="user.userName" [label]="'UserProfilePage.UserName' | translate" labelPlacement="floating" disabled="true"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input id="nombre2" type="text" [(ngModel)]="user.firstName" [label]="'UserProfilePage.FirstName' | translate" labelPlacement="floating"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="user.lastName" [label]="'UserProfilePage.LastName' | translate" labelPlacement="floating"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="user.email" [label]="'UserProfilePage.Email' | translate" labelPlacement="floating"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="user.address" [label]="'UserProfilePage.Address' | translate" labelPlacement="floating"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="user.secretQuestion" [label]="'UserProfilePage.SecretQuestion' | translate" labelPlacement="floating"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="user.secretAnswer" [label]="'UserProfilePage.SecretAnswer' | translate" labelPlacement="floating"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="text" [value]="user.educationalLevel.name" [label]="'UserProfilePage.EducationalLevel' | translate" labelPlacement="floating"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="text" [value]="user.dateOfBirth ? (user.dateOfBirth | date:'yyyy-MM-dd') : ''" [label]="'UserProfilePage.DateOfBirth' | translate" labelPlacement="floating"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="password" [(ngModel)]="user.password" [label]="'UserProfilePage.Password' | translate" labelPlacement="floating"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input type="password" [(ngModel)]="repeticionPassword" [label]="'UserProfilePage.RepeatPassword' | translate" labelPlacement="floating"></ion-input>
+  </ion-item>
+
+  <br>
+  <div class="centrar-boton">
+    <ion-button id="actualizar" (click)="actualizarPerfil()">{{ 'UserProfilePage.UpdateButton' | translate }}</ion-button>
+  </div>
+  <div class="centrar-boton-salir">
+    <ion-button id="salir2" expand="default" color="danger" (click)="cerrarSesion()">{{ 'UserProfilePage.LogoutButton' | translate }}</ion-button>
+  </div>
+</div>

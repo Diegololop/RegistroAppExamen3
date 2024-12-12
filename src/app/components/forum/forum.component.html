@@ -1,0 +1,82 @@
+<ion-content [fullscreen]="true" class="ion-padding">
+  <a id="topOfPage" href="#topOfPage"></a>
+
+  <ion-card class="post-creation-card">
+    <ion-card-header>
+      <ion-card-title class="title-header">{{ 'ForumPage.CardTitle' | translate }}</ion-card-title>
+    </ion-card-header>
+
+    <ion-item>
+      <ion-label position="stacked">{{ 'ForumPage.InputTitle' | translate }}</ion-label>
+      <ion-input 
+        [(ngModel)]="post.title"
+        type="text"
+        placeholder="Ingresa el título de la publicación">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">{{ 'ForumPage.InputContent' | translate }}</ion-label>
+      <ion-textarea 
+        [(ngModel)]="post.body"
+        placeholder="Escribe el contenido de la publicación"
+        [autoGrow]="true"
+        rows="4">
+      </ion-textarea>
+    </ion-item>
+
+    <div class="button-container">
+      <ion-button fill="outline" (click)="cleanPost()">
+        {{ 'ForumPage.CleanButton' | translate }}
+      </ion-button>
+      <ion-button (click)="savePost()">
+        {{ 'ForumPage.SaveButton' | translate }}
+      </ion-button>
+    </div>
+  </ion-card>
+
+  <div class="posts-section">
+    <h2 class="section-title">{{ 'ForumPage.RecentPosts' | translate }}</h2>
+
+    <ion-card *ngFor="let post of posts; trackBy: getPostId" class="post-card">
+      <ion-card-header>
+        <div class="post-header">
+          <ion-chip class="post-id">
+            #{{ post.id }}
+          </ion-chip>
+          <span class="post-author">{{ post.author }}</span>
+        </div>
+        <ion-card-title class="post-title">{{ post.title }}</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <p class="post-content">{{ post.body }}</p>
+
+        <div class="post-actions">
+          <ion-button fill="clear" (click)="editarPublicacion(post)" color="primary">
+            <ion-icon slot="icon-only" name="pencil-outline"></ion-icon>
+          </ion-button>
+          <ion-button fill="clear" (click)="eliminarPublicacion(post)" color="danger">
+            <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+          </ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div class="logout-container">
+    <ion-button color="danger" (click)="cerrarSesion()">
+      {{ 'ForumPage.LogoutButton' | translate }}
+    </ion-button>
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button size="small" (click)="scrollToTop()">
+      <ion-icon name="arrow-up"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <br>
+  <br>
+  <br>
+  
+</ion-content>
